@@ -20,5 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/registrosVer', [RegistroController::class, 'index']);
-Route::post('registros', [RegistroController::class, 'store']);
+Route::post('/users', [RegistroController::class, 'guardar']);
+
+
+Route::get('/verUsers', [RegistroController::class, 'index']);
